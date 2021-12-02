@@ -7,6 +7,13 @@ class Movie
     public $duration = "N/D";
     public $category = "N/D";
 
+    /* COnSTRUCT */
+
+    function __construct($_title)
+    {
+        $this->setTitle($_title);
+    }
+
     /* GETTER E SETTER TITLE */
     public function getTitle()
     {
@@ -15,6 +22,9 @@ class Movie
 
     public function setTitle($newTitle)
     {
+        if (is_null($newTitle)) {
+            return;
+        }
         $this->title = $newTitle;
     }
 
@@ -26,6 +36,9 @@ class Movie
 
     public function setDirector($newDirector)
     {
+        if (is_numeric($newDirector)) {
+            return "Inserire un formato valido";
+        }
         $this->director = $newDirector;
     }
 
@@ -37,6 +50,9 @@ class Movie
 
     public function setYear($newYear)
     {
+        if (!is_numeric($newYear)) {
+            return "Formato anno di uscita non valido";
+        }
         $this->year = $newYear;
     }
 
@@ -60,5 +76,25 @@ class Movie
     public function setCategory($newCategory)
     {
         $this->category = $newCategory;
+    }
+
+    /***********************************/
+
+    public function getMovieData()
+    {
+        return  "<strong>$this->title</strong>" . "<br>" . $this->director . "<br>" . $this->year . "<br>" . $this->duration . "<br>" . $this->category . "<br><br>";
+    }
+
+    public function createCard()
+    {
+        return "<div class='card' style='width: 18rem;'>
+        <div class='card-body'>
+          <h5 class='card-title'>$this->title</h5>
+          <h6 class='card-subtitle mb-2 text-muted'>$this->director</h6>
+          <h6 class='mb-2'>Anno: $this->year</h6>
+          <h6 class='mb-2'>Durata: $this->duration</h6>
+          <h6 class='mb-2'>Genere: $this->category</h6>
+        </div>
+      </div>";
     }
 }
