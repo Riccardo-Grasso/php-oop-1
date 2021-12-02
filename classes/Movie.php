@@ -6,6 +6,7 @@ class Movie
     public $year = "N/D";
     public $duration = "N/D";
     public $category = "N/D";
+    public $poster = "https://betravingknows.com/wp-content/uploads/2017/06/video-movie-placeholder-image-grey.png";
 
     /* COnSTRUCT */
 
@@ -78,6 +79,17 @@ class Movie
         $this->category = $newCategory;
     }
 
+    /* GETTER E SETTER POSTER */
+    public function getPoster()
+    {
+        return $this->poster;
+    }
+
+    public function setPoster($newPoster)
+    {
+        $this->poster = $newPoster;
+    }
+
     /***********************************/
 
     public function getMovieData()
@@ -87,14 +99,18 @@ class Movie
 
     public function createCard()
     {
-        return "<div class='card' style='width: 18rem;'>
-        <div class='card-body'>
-          <h5 class='card-title'>$this->title</h5>
-          <h6 class='card-subtitle mb-2 text-muted'>$this->director</h6>
-          <h6 class='mb-2'>Anno: $this->year</h6>
-          <h6 class='mb-2'>Durata: $this->duration</h6>
-          <h6 class='mb-2'>Genere: $this->category</h6>
-        </div>
-      </div>";
+        return "
+        <div class='col'>
+            <div class='card' style='width: 18rem;'>
+                <img src='$this->poster' class='card-img-top' alt='movie-poster'>
+                <div class='card-body'>
+                    <h5 class='card-title mb-3'>$this->title</h5>
+                    <h6 class='card-subtitle mb-3 text-muted'>$this->director</h6>
+                    <h6 class='mb-3'>Anno: $this->year</h6>
+                    <h6 class='mb-3'>Durata: $this->duration</h6>
+                    <h6 class='mb-3'>Genere: $this->category</h6>
+                </div>
+            </div>
+        </div>";
     }
 }
