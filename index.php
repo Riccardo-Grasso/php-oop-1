@@ -47,7 +47,7 @@ echo $movie3->createCard(); */
         </div>
     </header>
     <main class>
-        <div class="container pt-5">
+        <div class="container py-5">
             <div class="row">
 
                 <?php

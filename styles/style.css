@@ -5,7 +5,7 @@ header .myNav{
 
 main {
     background-color: rgb(116, 116, 116);
-    height: calc(100vh - 80px);
+    min-height: 100vh;
 }
 
 main .card {
