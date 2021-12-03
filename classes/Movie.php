@@ -105,7 +105,7 @@ class Movie
                 <img src='$this->poster' class='card-img-top' alt='movie-poster'>
                 <div class='card-body'>
                     <h5 class='card-title mb-3'>$this->title</h5>
-                    <h6 class='card-subtitle mb-3 text-muted'>$this->director</h6>
+                    <h6 class='card-subtitle mb-3 text-muted fst-italic'>$this->director</h6>
                     <h6 class='mb-3'>Anno: $this->year</h6>
                     <h6 class='mb-3'>Durata: $this->duration</h6>
                     <h6 class='mb-3'>Genere: $this->category</h6>
