@@ -18,3 +18,34 @@ main .card img{
     height: 400px;
     object-fit: cover;
 }
+
+
+.navbar {
+    background-color: black;
+    height: 120px;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img {
+    height: 60%;
+}
+
+/* .navbar .search-bar {
+    width: 25%;
+    margin-bottom: 0!important;
+}
+.form-control:focus {
+    border-color: black;
+    outline: 0;
+    box-shadow: none;
+};
+
+.btn {
+    background-color: red;
+    color: white;
+    border-color: black
+} */
+

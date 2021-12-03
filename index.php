@@ -42,10 +42,9 @@ echo $movie3->createCard(); */
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid myNav">
-        </div>
-    </header>
+    <?php
+    include_once "components/PageHeader.php"
+    ?>
     <main class>
         <div class="container py-5">
             <div class="row">
